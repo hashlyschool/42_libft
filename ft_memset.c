@@ -1,11 +1,11 @@
 #include "libft.h"
 
-void* ft_memset(void *buf, int ch, size_t count)
+void	*ft_memset(void *buf, int ch, size_t count)
 {
-	unsigned char	*b;
+	unsigned char	*ptr;
 
-	b = (unsigned char *)buf;
+	ptr = (unsigned char *)buf;
 	while (count--)
-		*b++ = ch;
-	return buf;
+		*(unsigned char *)ptr++ = (unsigned char)ch;
+	return (buf);
 }
