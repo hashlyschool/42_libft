@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int nbr, int fd)
 	size_t	len;
 
 	if (nbr == -2147483648)
-		return (ft_putstr_fd("-2147483648\n", fd));
+		return (ft_putstr_fd("-2147483648", fd));
 	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);

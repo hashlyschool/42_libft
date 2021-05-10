@@ -31,7 +31,7 @@ static size_t	ft_strlenc(char const *s, char c)
 	size_t	len;
 
 	len = 0;
-	while (*s++ != c)
+	while (*s != c && *s++)
 		len++;
 	return (len);
 }
