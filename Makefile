@@ -4,7 +4,7 @@ INCLUDE				= libft.h
 FLAGS				= -O3 -Wall -Wextra -Werror
 RM					= rm -rf
 AR					= ar rcs
-INC					= ./include
+INC_PATH			= ./include
 INC_FILE			= ./include/libft.h
 #Mandatory part
 SRCS_BASE_PATH		= ./mandatory/
@@ -43,19 +43,19 @@ $(NAME):			$(OBJS_BASE_PATH) $(OBJS_BASE) \
 	$(AR) $(NAME) $(OBJS_BASE) $(OBJS_BONUS) $(OBJS_CUSTOM)
 
 $(OBJS_BASE_PATH)%.o: $(SRCS_BASE_PATH)%.c $(INC_FILE)
-	$(CC) $(FLAGS) -I $(INC) -c $< -o $@
+	$(CC) $(FLAGS) -I $(INC_PATH) -c $< -o $@
 
 $(OBJS_BASE_PATH):
 	mkdir -p $(OBJS_BASE_PATH)
 
 $(OBJS_BONUS_PATH)%.o: $(SRCS_BONUS_PATH)%.c $(INC_FILE)
-	$(CC) $(FLAGS) -I $(INC) -c $< -o $@
+	$(CC) $(FLAGS) -I $(INC_PATH) -c $< -o $@
 
 $(OBJS_BONUS_PATH):
 	mkdir -p $(OBJS_BONUS_PATH)
 
 $(OBJS_CUSTOM_PATH)%.o: $(SRCS_CUSTOM_PATH)%.c $(INC_FILE)
-	$(CC) $(FLAGS) -I $(INC) -c $< -o $@
+	$(CC) $(FLAGS) -I $(INC_PATH) -c $< -o $@
 
 $(OBJS_CUSTOM_PATH):
 	mkdir -p $(OBJS_CUSTOM_PATH)
@@ -70,17 +70,15 @@ re:			fclean all
 
 .PHONY: all clean fclean re
 
-# $(OBJS):	$(SRCS)
-# 	$(CC) $(FLAGS) $(SRCS)
+#$(OBJS):	$(SRCS)
+#	$(CC) $(FLAGS) $(SRCS)
 
-# so: 		re
-# 	$(RM) libft.so
-# 	$(CC) -fPIC $(FLAGS) -c $(SRCS) $(BONUS_SRCS)
-# 	gcc -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+#so:		re
+#	$(RM) libft.so
+#	$(CC) -fPIC $(FLAGS) -c $(SRCS) $(BONUS_SRCS)
+#	gcc -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
-# bonus:		$(OBJS) $(BONUS_OBJS)
-# 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+#bonus:	$(OBJS) $(BONUS_OBJS)
+#	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
-# custom:
-
-
+#custom:
