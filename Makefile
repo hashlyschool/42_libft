@@ -31,7 +31,7 @@ OBJS_BONUS			= $(addprefix $(OBJS_BONUS_PATH), $(SRCS_BONUS_NAME:.c=.o))
 #Custom part
 SRCS_CUSTOM_PATH	= ./custom/
 OBJS_CUSTOM_PATH	= ./custom/objs/
-SRCS_CUSTOM_NAME	=
+SRCS_CUSTOM_NAME	= string_of_strings.c
 SRCS_CUSTOM			= $(addprefix $(SRCS_CUSTOM_PATH), $(SRCS_CUSTOM_NAME))
 OBJS_CUSTOM			= $(addprefix $(OBJS_CUSTOM_PATH), $(SRCS_CUSTOM_NAME:.c=.o))
 
