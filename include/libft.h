@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:21:33 by hashly            #+#    #+#             */
-/*   Updated: 2022/01/23 15:22:23 by hashly           ###   ########.fr       */
+/*   Updated: 2022/02/05 23:47:11 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin_free_s1(char const *s1, char const *s2);
+char	*ft_strjoin_free_s2(char const *s1, char const *s2);
+char	*ft_strjoin_free_all(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
@@ -68,6 +71,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-void	ft_free_str_of_str(char **arg);
+void	ft_free_str_of_str(char ***arg);
 char	**ft_add_line(char **arg, char *line);
+void	ft_print_str_of_str(char **arr);
+size_t	ft_len_str_str(char **arr);
+char	**ft_split_2(char const *s, char *c);
+
 #endif

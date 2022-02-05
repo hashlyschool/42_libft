@@ -1,7 +1,7 @@
 NAME				= libft.a
 CC					= clang
 INCLUDE				= libft.h
-FLAGS				= -O3 -Wall -Wextra -Werror
+FLAGS				= -g -Wall -Wextra -Werror
 RM					= rm -rf
 AR					= ar rcs
 INC_PATH			= ./include
@@ -31,7 +31,7 @@ OBJS_BONUS			= $(addprefix $(OBJS_BONUS_PATH), $(SRCS_BONUS_NAME:.c=.o))
 #Custom part
 SRCS_CUSTOM_PATH	= ./custom/
 OBJS_CUSTOM_PATH	= ./custom/objs/
-SRCS_CUSTOM_NAME	= string_of_strings.c
+SRCS_CUSTOM_NAME	= string_of_strings.c split_2.c
 SRCS_CUSTOM			= $(addprefix $(SRCS_CUSTOM_PATH), $(SRCS_CUSTOM_NAME))
 OBJS_CUSTOM			= $(addprefix $(OBJS_CUSTOM_PATH), $(SRCS_CUSTOM_NAME:.c=.o))
 
