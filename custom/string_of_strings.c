@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 15:11:27 by hashly            #+#    #+#             */
-/*   Updated: 2022/02/05 23:54:11 by hashly           ###   ########.fr       */
+/*   Updated: 2022/02/12 19:39:55 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	ft_free_str_of_str(char ***arg)
 	while (temp[i])
 		free(temp[i++]);
 	free(temp);
+	*arg = NULL;
 	return ;
 }
 
@@ -47,7 +48,7 @@ size_t	ft_len_str_str(char **arr)
 	size_t	len;
 
 	len = 0;
-	while (arr[len])
+	while (arr && arr[len])
 		len++;
 	return (len);
 }
@@ -68,5 +69,6 @@ char	**ft_add_line(char **arg, char *line)
 		ret[i] = NULL;
 	while (--i >= 0)
 		ret[i] = arg[i];
+	free(arg);
 	return (ret);
 }

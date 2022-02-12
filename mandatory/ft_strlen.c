@@ -6,16 +6,18 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:26:43 by hashly            #+#    #+#             */
-/*   Updated: 2022/01/10 18:18:04 by hashly           ###   ########.fr       */
+/*   Updated: 2022/02/12 20:41:38 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-size_t	ft_strlen( const char *str )
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	while (str[i] != '\0')
 		i++;
