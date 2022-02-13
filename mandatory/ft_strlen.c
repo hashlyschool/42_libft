@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:26:43 by hashly            #+#    #+#             */
-/*   Updated: 2022/02/12 20:41:38 by hashly           ###   ########.fr       */
+/*   Updated: 2022/02/13 18:28:13 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
-	if (!str)
-		return (0);
 	i = 0;
-	while (str[i] != '\0')
+	if (!str)
+		return (i);
+	while (str[i])
 		i++;
 	return (i);
 }
