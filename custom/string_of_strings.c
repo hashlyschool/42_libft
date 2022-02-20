@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 15:11:27 by hashly            #+#    #+#             */
-/*   Updated: 2022/02/12 19:39:55 by hashly           ###   ########.fr       */
+/*   Updated: 2022/02/19 15:32:25 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,9 @@ char	**ft_add_line(char **arg, char *line)
 		ret[i] = ft_strdup(line);
 	else
 		ret[i] = NULL;
-	while (--i >= 0)
+	while (--i >= 0 && arg)
 		ret[i] = arg[i];
-	free(arg);
+	if (arg)
+		free(arg);
 	return (ret);
 }
