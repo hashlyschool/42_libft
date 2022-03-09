@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 15:11:27 by hashly            #+#    #+#             */
-/*   Updated: 2022/02/19 15:32:25 by hashly           ###   ########.fr       */
+/*   Updated: 2022/03/09 18:25:16 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,27 @@
 void	ft_print_str_of_str(char **arr)
 {
 	size_t	i;
+	signed	j;
+	char	c;
 
 	i = 0;
 	if (!arr)
 		return ;
 	while (arr[i])
 	{
-		ft_putstr_fd(arr[i], 1);
+		j = 0;
+		while (arr[i][j])
+		{
+			if (ft_isprint(arr[i][j]))
+				ft_putchar_fd(arr[i][j], 1);
+			else
+			{
+				write(1, "\\", 1);
+				c = arr[i][j];
+				ft_putnbr_fd(c, 1);
+			}
+			j++;
+		}
 		ft_putstr_fd("\n", 1);
 		i++;
 	}
