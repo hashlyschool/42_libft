@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 15:11:27 by hashly            #+#    #+#             */
-/*   Updated: 2022/03/09 18:25:16 by hashly           ###   ########.fr       */
+/*   Updated: 2022/03/13 19:11:43 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_print_str_of_str(char **arr)
 {
 	size_t	i;
-	signed	j;
+	size_t	j;
 	char	c;
 
 	i = 0;
