@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:21:33 by hashly            #+#    #+#             */
-/*   Updated: 2022/02/12 15:34:22 by hashly           ###   ########.fr       */
+/*   Updated: 2022/03/13 22:23:58 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_free_str_of_str(char ***arg);
 char	**ft_add_line(char **arg, char *line);
+char	**ft_add_line_front(char **arg, char *line);
 void	ft_print_str_of_str(char **arr);
 size_t	ft_len_str_str(char **arr);
 char	**ft_split_2(char const *s, char *c);
