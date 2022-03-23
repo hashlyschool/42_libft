@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:26:31 by hashly            #+#    #+#             */
-/*   Updated: 2022/03/19 22:28:58 by hashly           ###   ########.fr       */
+/*   Updated: 2022/03/23 11:02:54 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*ptr;
 	size_t	len;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	len = ft_strlen(s1) + ft_strlen(s2);
 	ptr = (char *)malloc(sizeof(*s1) * (len + 1));
 	if (!ptr)
