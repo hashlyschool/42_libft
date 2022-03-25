@@ -17,7 +17,7 @@ SRCS_BASE_NAME		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 					ft_toupper.c ft_tolower.c ft_calloc.c ft_strdup.c \
 					ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
 					ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c \
-					ft_putendl_fd.c ft_putnbr_fd.c
+					ft_putendl_fd.c ft_putnbr_fd.c ft_isspace.c
 SRCS_BASE			= $(addprefix $(SRCS_BASE_PATH), $(SRCS_BASE_NAME))
 OBJS_BASE			= $(addprefix $(OBJS_BASE_PATH), $(SRCS_BASE_NAME:.c=.o))
 #Bonus part
