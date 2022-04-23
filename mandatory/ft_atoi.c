@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:21:40 by hashly            #+#    #+#             */
-/*   Updated: 2022/03/21 00:22:57 by hashly           ###   ########.fr       */
+/*   Updated: 2022/04/23 17:06:02 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	flag = 1;
 	len_num = 0;
 	while (*str == '\t' || *str == '\n' || *str == '\v' || *str == '\f'
-		|| *str == '\r' || *str == ' ')
+		|| *str == '\r' || *str == ' ' || *str == '0')
 		str++;
 	if (*str == '-' || *str == '+')
 	{
@@ -50,7 +50,7 @@ long long int	ft_atoi_long_long(const char *str)
 	flag = 1;
 	len_num = 0;
 	while (*str == '\t' || *str == '\n' || *str == '\v' || *str == '\f'
-		|| *str == '\r' || *str == ' ')
+		|| *str == '\r' || *str == ' ' || *str == '0')
 		str++;
 	if (*str == '-' || *str == '+')
 	{
